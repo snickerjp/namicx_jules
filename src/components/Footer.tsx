@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="bg-deep-navy border-t border-white/5 py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-blue-grey text-xs tracking-widest uppercase">
-        <div className="mb-6 md:mb-0">
-          © 2024 Ikebukuro Nami. All Rights Reserved.
+    <footer className="bg-[#061426] w-full py-16 border-t border-[#1e2a3d]/15">
+      <div className="flex flex-col items-center gap-8 px-4 w-full text-center">
+        <div className="font-headline text-[#d6e3fd] text-2xl tracking-widest">Ikebukuro Nami</div>
+        <div className="flex flex-wrap justify-center gap-8 font-body text-sm tracking-wide">
+          <a className="text-[#d6e3fd]/40 hover:text-[#d6e3fd] transition-colors" href="#">Privacy Policy</a>
+          <a className="text-[#d6e3fd]/40 hover:text-[#d6e3fd] transition-colors" href="#">Contact</a>
+          <a className="text-[#d6e3fd]/40 hover:text-[#d6e3fd] transition-colors" href="#">Press</a>
+          <a className="text-[#d6e3fd]/40 hover:text-[#d6e3fd] transition-colors" href="#">Careers</a>
         </div>
-        <div className="flex space-x-8">
-          <a href="#" className="hover:text-accent transition-colors">Instagram</a>
-          <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-accent transition-colors text-accent border border-accent/20 px-4 py-2 -my-2 rounded-sm">Reservations</a>
-        </div>
+        <p className="text-[#d6e3fd]/40 font-body text-xs">© 2024 Ikebukuro Nami. The Nocturnal Artisan.</p>
       </div>
     </footer>
   );

@@ -1,53 +1,55 @@
 import WashiLayout from '@/components/WashiLayout';
 
 export default function MenuPage() {
-  const menuItems = [
-    { name: "Sea-Breeze Signature", price: "3,200", desc: "和紙のように薄く削り出された鰹節と、厳選された北海道産ホタテの饗宴。" },
-    { name: "The Nocturnal Truffle", price: "4,500", desc: "和牛の旨味と黒トリュフの薫りが鉄板の上で溶け合う、究極の逸品。" },
-    { name: "Nami Classic", price: "1,800", desc: "創業時からの伝統を守り続ける、シンプルながら奥深いお好み焼き。" }
-  ];
-
-  const drinkItems = [
-    { name: "Junmai Daiginjo 'Yume'", price: "1,800 / Glass", desc: "静寂な夜にふさわしい、透明感あふれる希少な銘酒。" },
-    { name: "Premium Hawaiian Beer", price: "1,200", desc: "骨董の空間に、一時の爽やかな風を運ぶクラフトビール。" }
-  ];
-
   return (
     <WashiLayout>
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-24">
+      <div className="max-w-7xl mx-auto px-6 py-24 space-y-24">
         <header className="text-center space-y-4">
-          <h2 className="text-4xl md:text-6xl font-serif-jp text-accent tracking-tighter">和紙に綴る、鉄板の饗宴</h2>
-          <p className="text-blue-grey tracking-widest uppercase text-sm">Experience the Art of Teppan & Craft Spirits</p>
+          <span className="text-primary font-headline tracking-[0.4em] uppercase text-xs">Cuisine</span>
+          <h1 className="text-4xl md:text-6xl font-headline font-bold text-on-surface">和紙に綴る、鉄板の饗宴</h1>
+          <p className="text-on-surface-variant font-body tracking-widest uppercase text-sm">Experience the Art of Teppan & Craft Spirits</p>
         </header>
 
-        <section className="grid lg:grid-cols-2 gap-12">
-          <div className="space-y-12">
-            <h3 className="text-2xl font-serif text-secondary border-b border-white/10 pb-4 tracking-widest uppercase">Main Dishes</h3>
+        <section className="grid lg:grid-cols-2 gap-16">
+          <article className="bg-surface-container washi-texture p-10 rounded-xl space-y-8 border border-white/5">
+            <h2 className="font-headline text-3xl text-primary border-b border-white/10 pb-6 tracking-widest">Main Dishes</h2>
             <div className="space-y-12">
-              {menuItems.map((item, idx) => (
-                <div key={idx} className="space-y-2 group">
-                  <div className="flex justify-between items-baseline">
-                    <h4 className="text-xl font-serif text-washi-white group-hover:text-accent transition-colors">{item.name}</h4>
-                    <span className="text-blue-grey text-sm font-sans">¥{item.price}</span>
-                  </div>
-                  <p className="text-blue-grey/60 text-sm leading-relaxed">{item.desc}</p>
+              <div className="space-y-3">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-headline text-2xl font-bold text-on-surface">Sea-Breeze Signature</h3>
+                  <span className="font-body text-primary font-semibold text-xl">¥3,200</span>
                 </div>
-              ))}
+                <p className="font-body text-on-surface-variant leading-relaxed">Paper-thin bonito shavings dancing over premium Hokkaido scallops and local octopus.</p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-headline text-2xl font-bold text-on-surface">The Nocturnal Truffle</h3>
+                  <span className="font-body text-primary font-semibold text-xl">¥4,500</span>
+                </div>
+                <p className="font-body text-on-surface-variant leading-relaxed">A fusion of earthy black truffle, wild mushrooms, and melt-in-your-mouth wagyu beef strips.</p>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div className="space-y-12">
-            <h3 className="text-2xl font-serif text-secondary border-b border-white/10 pb-4 tracking-widest uppercase">Selections</h3>
-            <div className="space-y-12">
-              {drinkItems.map((item, idx) => (
-                <div key={idx} className="space-y-2 group">
-                  <div className="flex justify-between items-baseline">
-                    <h4 className="text-xl font-serif text-washi-white group-hover:text-accent transition-colors">{item.name}</h4>
-                    <span className="text-blue-grey text-sm font-sans">¥{item.price}</span>
+          <div className="space-y-8">
+            <div className="bg-surface-container-high washi-texture p-10 rounded-xl relative overflow-hidden border border-white/5 h-full">
+              <h2 className="font-headline text-3xl text-primary mb-10">Selection of Rare Sake</h2>
+              <div className="space-y-8 relative z-10">
+                <div className="flex justify-between items-end">
+                  <div>
+                    <h4 className="font-headline text-xl text-on-surface">Junmai Daiginjo "Yume"</h4>
+                    <p className="text-on-surface-variant text-sm">Ethereal floral notes with a silky finish.</p>
                   </div>
-                  <p className="text-blue-grey/60 text-sm leading-relaxed">{item.desc}</p>
+                  <span className="text-primary font-semibold">¥1,800</span>
                 </div>
-              ))}
+                <div className="flex justify-between items-end">
+                  <div>
+                    <h4 className="font-headline text-xl text-on-surface">Koshu Aged Reserve</h4>
+                    <p className="text-on-surface-variant text-sm">Vintage sake with complex earthy umami.</p>
+                  </div>
+                  <span className="text-primary font-semibold">¥2,400</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -10,7 +10,7 @@ interface Props {
 
 export default function WashiLayout({ children }: Props) {
   return (
-    <div className="washi-texture flex flex-col min-h-screen">
+    <div className="washi-texture flex flex-col min-h-screen selection:bg-primary/30">
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
@@ -18,7 +18,7 @@ export default function WashiLayout({ children }: Props) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="flex-grow pt-24 pb-12"
+          className="flex-grow"
         >
           {children}
         </motion.main>

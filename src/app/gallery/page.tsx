@@ -1,33 +1,37 @@
 import WashiLayout from '@/components/WashiLayout';
 
 export default function GalleryPage() {
-  const images = [
-    { title: "Heritage Whispers", subtitle: "継承される声", url: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=1200" },
-    { title: "Distant Shores", subtitle: "異国の風と古雅", url: "https://images.unsplash.com/photo-1555392858-4509118d1bb0?auto=format&fit=crop&q=80&w=1200" },
-    { title: "Forge & Flame", subtitle: "静寂の中の熱気", url: "https://images.unsplash.com/photo-1512132411229-c30391241dd8?auto=format&fit=crop&q=80&w=1200" },
-    { title: "Ephemeral Fibers", subtitle: "紙卸の記憶", url: "https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?auto=format&fit=crop&q=80&w=1200" }
-  ];
-
   return (
     <WashiLayout>
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+      <div className="max-w-7xl mx-auto px-6 py-24 space-y-16">
         <header className="space-y-4">
-          <h2 className="text-4xl md:text-6xl font-serif-jp text-accent tracking-tighter">THE COLLECTION</h2>
-          <p className="text-blue-grey tracking-widest uppercase text-sm">Curating the Intersection of History and Passion</p>
+          <span className="text-primary font-headline tracking-[0.4em] uppercase text-xs">Gallery</span>
+          <h1 className="text-5xl md:text-7xl font-headline font-bold text-on-surface">THE COLLECTION：偏愛の空間</h1>
+          <p className="text-on-surface-variant font-body tracking-widest uppercase text-sm">The Archive: Curating the Intersection of History and Passion</p>
         </header>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {images.map((img, idx) => (
-            <div key={idx} className="group relative h-[400px] overflow-hidden rounded-sm cursor-pointer shadow-xl">
-              <div className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105" style={{backgroundImage: `url('${img.url}')`}}></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy via-deep-navy/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
-              <div className="absolute bottom-8 left-8 space-y-1">
-                <h3 className="text-2xl font-serif text-accent">{img.title}</h3>
-                <p className="text-washi-white/60 text-xs tracking-[0.2em] uppercase">{img.subtitle}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <section className="grid md:grid-cols-12 gap-8">
+          <div className="md:col-span-5 group relative overflow-hidden bg-surface-container border border-white/5 rounded-sm">
+             <div className="aspect-[4/5] overflow-hidden">
+                <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-75" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=1200" alt="Heritage" />
+                <div className="absolute inset-0 chiaroscuro-mask"></div>
+             </div>
+             <div className="absolute bottom-0 left-0 p-8">
+                <h3 className="font-headline text-2xl text-primary mb-2">Heritage Whispers</h3>
+                <p className="text-on-surface-variant font-light text-sm">Tracing the ink back to the days when paper was our only trade.</p>
+             </div>
+          </div>
+          <div className="md:col-span-7 group relative overflow-hidden bg-surface-container border border-white/5 rounded-sm">
+             <div className="aspect-[16/9] overflow-hidden">
+                <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-75" src="https://images.unsplash.com/photo-1512132411229-c30391241dd8?auto=format&fit=crop&q=80&w=1200" alt="Teppan" />
+                <div className="absolute inset-0 chiaroscuro-mask"></div>
+             </div>
+             <div className="absolute bottom-0 left-0 p-8">
+                <h3 className="font-headline text-2xl text-primary mb-2">Forge & Flame</h3>
+                <p className="text-on-surface-variant font-light text-sm">Where the artisan's heat transforms tradition into an edible masterpiece.</p>
+             </div>
+          </div>
+        </section>
       </div>
     </WashiLayout>
   );

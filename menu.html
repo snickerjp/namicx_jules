@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Manrope:wght@300;400;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface": "#d6e3fd",
+            "secondary-fixed": "#ffdbce",
+            "primary-fixed-dim": "#fdb96a",
+            "on-primary-fixed-variant": "#673d00",
+            "outline": "#8f9097",
+            "tertiary-fixed-dim": "#c9c3db",
+            "on-tertiary-container": "#7c778d",
+            "surface-container": "#132033",
+            "background": "#061426",
+            "primary-fixed": "#ffddba",
+            "surface-container-highest": "#293549",
+            "surface-variant": "#293549",
+            "surface-container-low": "#0f1c2e",
+            "tertiary-container": "#0c0a1b",
+            "on-tertiary-fixed": "#1c192b",
+            "surface-dim": "#061426",
+            "on-error": "#690005",
+            "on-surface-variant": "#c5c6cd",
+            "secondary-fixed-dim": "#ffb598",
+            "secondary-container": "#723920",
+            "surface": "#061426",
+            "on-primary-container": "#a66e27",
+            "surface-bright": "#2d3a4d",
+            "primary-container": "#160900",
+            "tertiary": "#c9c3db",
+            "on-tertiary": "#312e41",
+            "on-secondary-fixed-variant": "#6f371e",
+            "on-secondary": "#53210a",
+            "inverse-primary": "#85530a",
+            "inverse-on-surface": "#243144",
+            "on-tertiary-fixed-variant": "#484458",
+            "surface-container-lowest": "#020e20",
+            "on-secondary-fixed": "#370e00",
+            "inverse-surface": "#d6e3fd",
+            "on-primary": "#482900",
+            "tertiary-fixed": "#e6dff8",
+            "outline-variant": "#44474c",
+            "on-background": "#d6e3fd",
+            "error": "#ffb4ab",
+            "surface-container-high": "#1e2a3d",
+            "on-primary-fixed": "#2b1700",
+            "on-error-container": "#ffdad6",
+            "secondary": "#ffb598",
+            "on-secondary-container": "#f5a584",
+            "surface-tint": "#fdb96a",
+            "primary": "#fdb96a",
+            "error-container": "#93000a"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif JP", "serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>body {
+    background-color: #061426;
+    /* surface-dim */
+    font-family: "Manrope", sans-serif
+    }
+.washi-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB2ZCDXoAy-w8gTLn3SXhG8WUbxHRqG-ZyS3S5xQKlxnk-aNqhy89itHKo80JkvjXf_GTuZcQ-oJblmh0vEXi8RTgjqKsWOZ9NVauYi3-sAEuvvnGKSI-MrHYmw5Ok01sT7vH7JER-DRhFHuFqr3QbTxHV4U6Hd7sL7LkqyYQgZA8KSP04XmjO1AjFD4FjzzW4qa5HpsKx70YCsW-Cp4Q-IoCZSNgSQvfyXG1VFUu46TPKP1-IPxBlCWM7In0giKerVnxCTXsKq9k44);
+    background-blend-mode: overlay
+    }
+.serif-title {
+    font-family: "Noto Serif JP", serif
+    }</style>
+</head>
+<body class="text-on-surface selection:bg-primary/30 selection:text-primary-fixed">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl shadow-2xl shadow-indigo-950/20">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="font-serif italic text-2xl text-amber-200">Ikebukuro Nami</div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-serif text-on-surface tracking-wide text-amber-400 border-b border-amber-400/30 pb-1 hover:text-amber-200 transition-colors duration-500" href="#">Menu</a>
+<a class="font-serif text-on-surface tracking-wide text-slate-300 hover:text-amber-200 transition-colors duration-500" href="#">Heritage</a>
+<a class="font-serif text-on-surface tracking-wide text-slate-300 hover:text-amber-200 transition-colors duration-500" href="#">Reservations</a>
+<a class="font-serif text-on-surface tracking-wide text-slate-300 hover:text-amber-200 transition-colors duration-500" href="#">Access</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body font-semibold scale-95 duration-300 ease-out hover:scale-100">
+          Book a Table
+        </button>
+</div>
+<!-- Mobile Menu Trigger -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-amber-400">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section (Asymmetric Editorial) -->
+<header class="relative pt-32 pb-24 px-8 max-w-screen-2xl mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<h1 class="serif-title text-5xl md:text-7xl font-black text-on-surface leading-tight mb-6">
+          『和紙に綴る、<br/>
+<span class="text-primary italic">鉄板の饗宴</span>』
+        </h1>
+<p class="font-body text-lg md:text-xl tracking-[0.2em] text-on-surface-variant font-light">
+          EXPERIENCE THE ART OF TEPPAN &amp; CRAFT SPIRITS
+        </p>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="absolute inset-0 bg-primary/10 blur-3xl rounded-full"></div>
+<img class="w-full h-[500px] object-cover rounded-lg shadow-2xl relative z-10 grayscale-[20%] sepia-[10%]" data-alt="dramatic close-up of steam rising from a gourmet okonomiyaki on a dark steel griddle with moody lantern lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnOtffKziP5qCekhLrW4GALUTOFKq0iYV55oOE_Y1GAyV9JYKL-t8YF9g8CBKkMVwOkON9F_9Eq-TbWCR0sjbDFCdTTLl7t3tYa1fNAjTprRoeNjDM9QOs-DNc3x81kGovazyDpJmCuUtGuqwzaI-22QbrIAN0aN7xQd_ZalJ7Cfqa74m14c5e2XGWaYjJjmp3DtgL-UH--kQkoSOD8RFCxkFxJtgxlyXhEg7GglWiYQU3DiJAwMmRpQ8fv7RRvsaAt5QKE9owfib2"/>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 pb-32 space-y-32">
+<!-- Main Section: Nami Special Okonomiyaki -->
+<section>
+<div class="flex items-baseline gap-4 mb-12">
+<h2 class="serif-title text-3xl md:text-4xl text-primary">Nami Special Okonomiyaki</h2>
+<div class="h-[1px] flex-grow bg-gradient-to-r from-primary/30 to-transparent"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Item 1: Signature -->
+<article class="group relative surface-container-low washi-texture p-8 rounded-lg transition-all duration-500 hover:bg-surface-container hover:shadow-2xl hover:shadow-primary/5">
+<div class="flex justify-between items-start mb-6">
+<h3 class="serif-title text-2xl font-bold text-on-surface">Sea-Breeze Signature</h3>
+<span class="font-body text-primary font-semibold text-xl">¥3,200</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8 max-w-md">
+            Paper-thin bonito shavings dancing over premium Hokkaido scallops and local octopus. Finished with our 48-hour signature sauce.
+          </p>
+<div class="flex items-center gap-2 text-primary/60">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs tracking-widest font-label font-bold uppercase">House Specialty</span>
+</div>
+</article>
+<!-- Item 2: Truffle -->
+<article class="group relative surface-container-low washi-texture p-8 rounded-lg transition-all duration-500 hover:bg-surface-container hover:shadow-2xl hover:shadow-primary/5">
+<div class="flex justify-between items-start mb-6">
+<h3 class="serif-title text-2xl font-bold text-on-surface">The Nocturnal Truffle</h3>
+<span class="font-body text-primary font-semibold text-xl">¥4,500</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8 max-w-md">
+            A fusion of earthy black truffle, wild mushrooms, and melt-in-your-mouth wagyu beef strips. Elegance on a hot griddle.
+          </p>
+<div class="flex items-center gap-2 text-primary/60">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span class="text-xs tracking-widest font-label font-bold uppercase">Premium Selection</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Drinks Grid (Bento Style) -->
+<section class="grid lg:grid-cols-12 gap-8">
+<!-- Sake Section -->
+<div class="lg:col-span-8 bg-surface-container-high washi-texture p-10 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-10">
+<span class="material-symbols-outlined text-primary text-3xl">liquor</span>
+<h2 class="serif-title text-3xl text-on-surface">Selection of Rare Japanese Sake</h2>
+</div>
+<div class="space-y-8">
+<div class="flex justify-between items-end group">
+<div>
+<h4 class="serif-title text-xl text-on-surface">Junmai Daiginjo "Yume"</h4>
+<p class="text-on-surface-variant text-sm font-light">Ethereal floral notes with a silky mineral finish.</p>
+</div>
+<span class="text-primary font-semibold">¥1,800/Glass</span>
+</div>
+<div class="flex justify-between items-end group">
+<div>
+<h4 class="serif-title text-xl text-on-surface">Nocturnal Mist Nigori</h4>
+<p class="text-on-surface-variant text-sm font-light">Unfiltered, creamy texture with hints of melon.</p>
+</div>
+<span class="text-primary font-semibold">¥1,500/Glass</span>
+</div>
+<div class="flex justify-between items-end group">
+<div>
+<h4 class="serif-title text-xl text-on-surface">Koshu Aged Reserve</h4>
+<p class="text-on-surface-variant text-sm font-light">Vintage sake with complex earthy umami.</p>
+</div>
+<span class="text-primary font-semibold">¥2,400/Glass</span>
+</div>
+</div>
+</div>
+<!-- Decorative Sake Image -->
+<img class="absolute -right-20 -bottom-20 w-80 h-80 object-cover opacity-30 group-hover:opacity-50 transition-opacity pointer-events-none rounded-full" data-alt="extreme close-up of a delicate glass of premium sake with a crystal clear artisan ice cube in a dark indigo setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfvhjeQnirLCtFsI98gIsX32KMY1BD9MvcomPUq_JTSq6vV5Oj9tDpzbP2DrR0orj26Dypi7cj3MaKyYaH5-TkKIpuCo46ENXVRkcJRmHBKvQENU8rQ69Gxg4aANc3MPQXtQYqIIn9hq7a2X8F5fOUC8l9XHbk3j6-nBhkTxoDuVED99wB8bkJzUCnSH7vPfjzb1lAbkxZ_tmkXLEsbfafDctjtWwZITwZnjmVflUJTtRtlUbWcemPGfAsdoDCkQ5v-lSC879j7O-w"/>
+</div>
+<!-- Hawaiian Beer Section -->
+<div class="lg:col-span-4 bg-surface-container washi-texture p-10 rounded-xl">
+<div class="flex items-center gap-4 mb-10">
+<span class="material-symbols-outlined text-secondary text-3xl">sports_bar</span>
+<h2 class="serif-title text-3xl text-on-surface">Premium Hawaiian Beers</h2>
+</div>
+<div class="space-y-10">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<h4 class="font-body font-bold text-on-surface">Big Wave Golden Ale</h4>
+<span class="text-secondary">¥1,200</span>
+</div>
+<p class="text-on-surface-variant text-xs">Light, tropical fruit notes, extremely crisp.</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<h4 class="font-body font-bold text-on-surface">Kona Castaway IPA</h4>
+<span class="text-secondary">¥1,400</span>
+</div>
+<p class="text-on-surface-variant text-xs">Citrus-forward hops with a touch of pineapple.</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<h4 class="font-body font-bold text-on-surface">Longboard Island Lager</h4>
+<span class="text-secondary">¥1,200</span>
+</div>
+<p class="text-on-surface-variant text-xs">A smooth, refreshing lager for the warm palate.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Omakase Feature -->
+<section class="relative bg-surface-container-lowest rounded-2xl overflow-hidden shadow-2xl">
+<div class="grid lg:grid-cols-2">
+<div class="p-12 md:p-20 flex flex-col justify-center">
+<span class="text-primary font-label text-xs tracking-[0.4em] uppercase mb-4">The Artisan's Choice</span>
+<h2 class="serif-title text-4xl md:text-5xl text-on-surface mb-8">Omakase Experience</h2>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed font-light mb-10">
+            Allow our artisans to curate a 7-course journey through the seasons. Each dish is prepared live on the teppan, featuring the day's freshest arrivals from Tsukiji and beyond.
+          </p>
+<div class="p-6 bg-primary-container border-l-2 border-primary">
+<p class="font-label text-sm text-primary uppercase tracking-widest font-bold">
+              Available only by reservation. Limited to 4 seats per session.
+            </p>
+</div>
+<button class="mt-12 self-start border border-outline-variant hover:border-primary px-10 py-4 font-body tracking-widest transition-all duration-300">
+            INQUIRE AVAILABILITY
+          </button>
+</div>
+<div class="h-64 lg:h-auto bg-slate-900 relative">
+<img class="w-full h-full object-cover" data-alt="an artisan chef's hands masterfully preparing food on a shiny stainless steel teppan in a low-lit upscale restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBseAKqfmb_awORMzhfpT0kyHROnyIquHiIZk_7nXfjwZt7p7lpG-cqFJjDDZHD9joadZyKXcnSU12FLsi4NvZzk698Cz07LZhaF4mplMMfPXqAcwAV6Bb4oZBHSPy7C576h6L9Kl7mnI3w-OlAJfxsFnDIU_NdMzKaKMfxgp6edy8gO5F3a3m5WDgU7hAx2hkOsz1jPDnbDaewUlGah8O_JPlVR6SA9C9DepNvOFWM2Sdo6xrFziK4cHUAgkRQPa6diiwcRCgpWmHY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest to-transparent lg:block hidden"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="bg-slate-950 w-full py-12 border-t border-slate-800/20">
+<div class="flex flex-col items-center gap-4 w-full">
+<div class="font-serif text-amber-200 text-xl">Ikebukuro Nami</div>
+<div class="flex gap-8">
+<a class="font-serif text-sm text-slate-500 hover:text-amber-400 transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-serif text-sm text-slate-500 hover:text-amber-400 transition-opacity opacity-80 hover:opacity-100" href="#">Contact Us</a>
+<a class="font-serif text-sm text-slate-500 hover:text-amber-400 transition-opacity opacity-80 hover:opacity-100" href="#">Careers</a>
+</div>
+<div class="font-serif text-sm text-slate-400 mt-4">
+        © 2024 Ikebukuro Nami. All rights reserved.
+      </div>
+</div>
+</footer>
+</body></html>
